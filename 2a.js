@@ -8,7 +8,16 @@ const server = http.createServer(function (request, response) {
   var answer = '';  //設置回應內容
 
   // 請寫 switch完成各個收到不同的請求以及輸出不同的回應字串 (使用 switch)
-  
+  switch (url) {
+    case '/':
+      answer = 'index.html';
+      break;
+    case '/calculator':
+      answer = 'index2.html';
+      break;
+    default:
+      answer = 'error.html';
+  }
 
 
 

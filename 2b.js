@@ -43,7 +43,36 @@ http.createServer((req, res) => {
   let fileOtherFile = '';
 
   // Switch根據不同路由要寫的部分
-
+  switch (req.url) {
+    case '/':
+      //首頁路由
+      filePath = '/index.ejs';
+      break;
+    case '/calculator':
+      //計算器頁面路由
+      filePath = '/index2.ejs';
+      break;
+    case '/style.css':
+      //靜態CSS檔案
+      fileOtherFile = '/style.css';
+      break;
+    case '/script.js':
+      //靜態資源路由：JavaScript腳本
+      fileOtherFile = '/script.js';
+      break;
+    case '/style2.css':
+      //靜態資源路由：計算器頁面CSS
+      fileOtherFile = '/style2.css';
+      break;
+    case '/style3.css':
+      // 靜態 CSS 檔案路由  
+      fileOtherFile = '/style3.css';
+      break;   
+    default:  
+      // 其他路由 → 404 頁面  
+      filePath = '/index3.ejs'; 
+      break;
+  }
 
 
 
