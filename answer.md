@@ -126,6 +126,8 @@ function updateStock(products, updates) {
 <!--  請撰寫時，第一句話再寫一次  -->
 
 2. a.
+由上述程式碼可知該程式是建立HTTP協議的服務
+
 Ans:
 ```js
 switch (url) {
